@@ -1,0 +1,28 @@
+{
+  "name": "immutable-data-structures-workshop",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "immutable": "^4.0.0-rc.12"
+  },
+  "devDependencies": {
+    "@types/immutable": "^3.8.7",
+    "@types/jest": "^24.0.11",
+    "jest": "^24.5.0"
+  },
+  "scripts": {
+    "test": "jest tasks/**/*.test.js",
+    "test:watch": "npm run test -- --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Gelio/immutable-data-structures-workshop.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Gelio/immutable-data-structures-workshop/issues"
+  },
+  "homepage": "https://github.com/Gelio/immutable-data-structures-workshop#readme"
+}
