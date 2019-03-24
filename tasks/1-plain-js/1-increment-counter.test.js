@@ -6,7 +6,7 @@ describe('[plainJS] 1 - increment counter', () => {
       counter: 1,
     };
 
-    expect(incrementCounter(state).state).toBe(2);
+    expect(incrementCounter(state).counter).toBe(2);
   });
 
   it('should return an object with incremented counter for initial value of 2', () => {
@@ -14,7 +14,7 @@ describe('[plainJS] 1 - increment counter', () => {
       counter: 2,
     };
 
-    expect(incrementCounter(state).state).toBe(3);
+    expect(incrementCounter(state).counter).toBe(3);
   });
 
   it('should return an object with incremented counter for initial value of 2', () => {
@@ -22,7 +22,7 @@ describe('[plainJS] 1 - increment counter', () => {
       counter: 2,
     };
 
-    expect(incrementCounter(state).state).toBe(3);
+    expect(incrementCounter(state).counter).toBe(3);
   });
 
   it('should not modify the initial state', () => {
@@ -34,4 +34,3 @@ describe('[plainJS] 1 - increment counter', () => {
     expect(state.counter).toBe(1);
   });
 });
-
