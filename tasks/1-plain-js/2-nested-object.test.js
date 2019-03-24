@@ -46,7 +46,7 @@ describe('[plainJS] 2 - nested object', () => {
       },
     };
 
-    const updated = updateNestedObject(state);
+    const updatedState = updateNestedObject(state);
 
     expect(updatedState.unrelated).toBe(state.unrelated);
   });
