@@ -5,21 +5,15 @@ function getOftenAccessedUsers(users) {
 }
 
 function accessUsers(users) {
-  users.forEach(user => {
-    user.accessedTimes++;
-  });
+  return users.map(user => ({
+    ...user,
+    accessedTimes: user.accessedTimes + 1,
+  }));
 }
 
 function performArrayOperations(users) {
-  /**
-   * TODO:
-   * 1. Access each user using `accessUsers`
-   * 2. Return only often accessed users (the result of `getOftenAccessedUsers`)
-   *
-   * Verify that both functions above do not perform directm mutations (are immutable)
-   */
-
-  return users;
+  const accessedUsers = accessUsers(users);
+  return getOftenAccessedUsers(accessedUsers);
 }
 
 module.exports = performArrayOperations;

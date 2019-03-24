@@ -8,6 +8,7 @@ function* recordsTask() {
   const User = Record({
     id: null,
     name: null,
+    age: null,
   });
 
   yield User;
@@ -18,6 +19,7 @@ function* recordsTask() {
   const alice = User({
     id: '1',
     name: 'Alice',
+    age: 20,
   });
 
   yield alice;
@@ -30,14 +32,7 @@ function* recordsTask() {
  * @param {Record<{ id: string; name: string; age: number; }>} user
  */
 function incrementUserAge(user) {
-  const age = user.age;
-
-  /**
-   * TODO: increment `user.age`
-   * Remember that `user` is an ImmutableJS `Record`
-   */
-
-  return user;
+  return user.update('age', age => age + 1);
 }
 
 module.exports = recordsTask;

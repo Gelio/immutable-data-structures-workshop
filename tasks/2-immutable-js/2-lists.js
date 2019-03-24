@@ -1,7 +1,6 @@
 const { List } = require('immutable');
 
 /**
- * TODO: fix a bug
  *
  * @param {List<{ id: string; name: string; }>} users
  * @param {string} userId
@@ -11,14 +10,13 @@ function removeUserById(users, userId) {
   const index = users.findIndex(user => user.id === userId);
 
   if (index !== -1) {
-    users.splice(index, 1);
+    return users.splice(index, 1);
   }
 
   return users;
 }
 
 /**
- * TODO: fix a bug
  *
  * @param {List<{ id: string; name: string; }>} users
  * @param {string} userId
@@ -26,7 +24,7 @@ function removeUserById(users, userId) {
  * @returns {List<{ id: string; name: string; }>}
  */
 function addUser(users, userId, userName) {
-  users.push({
+  return users.push({
     id: userId,
     name: userName,
   });
